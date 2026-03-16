@@ -1,0 +1,77 @@
+
+# function definitions
+ 
+def uh_oh():
+	restartyn = input("Uh oh! You entered something my system can't recognize. If you would like to start again, please press Z!")
+	restart = restartyn.upper()
+	if restart == "Z":
+		start()
+
+
+
+
+def start():
+	global name
+	name = input("Hello! What is your name?")
+	print(f"Hello, {name}!")
+	age = input(f"How old are you, {name}?")
+	if age.isnumeric():
+		age_number = int(age)
+		if age_number >= 18:
+			print("Hooray, you can vote!")
+			choose()
+		if age_number < 18:
+			print(f"Unfortunately, you can't vote yet. There are {18-age_number} years until you can vote.")
+			choose()
+	else: uh_oh()
+
+
+
+def choose():
+	choicenotupper = input("What would you like to learn about? Press A for the history of democracy in America, B for the different modern parties, C for different governing styles, or D to exit.")
+	choice = choicenotupper.upper()
+	if choice == "A":
+		history()
+	elif choice == "B":
+		parties()
+	elif choice == "C":
+		styles()
+	elif choice == "D":
+		exit_program()
+	else:	uh_oh()
+
+
+def history():
+	print("America gained independence when it rebelled against the British and elected George Washington as president.")
+	choiceagainnotupper = input("Would you like to try again?Y/N")
+	choiceagain = choiceagainnotupper.upper()
+	if choiceagain == "Y":
+		choose()
+	if choiceagain == "N":
+		exit_program()
+def parties():
+	print("America currently has two major parties: the Republican and the Democratic parties. The Democratic party tends to care more about social change, such as welfare and equal rights, while the Republican party tends to prioritize low taxes and a sense of nationalism.")
+	choiceagainnotupper = input("Would you like to try again? Y/N")
+	choiceagain = choiceagainnotupper.upper()
+	if choiceagain == "Y":
+		choose()
+	if choiceagain == "N":
+		exit_program()
+def styles():
+	print("There are many different governing styles. America, for example, is capatalist. Some styles, such as communism, are very rare nowadays, although countries like China claim to operate under them.")
+	choiceagainnotupper = input("Would you like to try again? Y/N")
+	choiceagain = choiceagainnotupper.upper()
+	if choiceagain == "Y":
+		choose()
+	if choiceagain == "N":
+		exit_program()
+	else:
+		uh_oh()
+def exit_program():
+	print("Thanks for playing!")
+	
+	
+
+#calling start because we lwk needa do that
+start()
+
