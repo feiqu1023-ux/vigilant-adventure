@@ -1,3 +1,2 @@
 # vigilant-adventure
-This is the first thing I've ever coded, so it's pretty basic, lol. You can learn about politics, yay!
-Enjoy! 
+My project is called "Politics informer", and it's a small text-based project to inform people about the political process and small aspects of the political process in the USA. I made my project as a starting point to learn more about python for myself and teach others some basic things about politics. I made my project by categorizing all of my actions into different functions, in order to organize it properly, and I used Google to help learn about the coding language. I struggled with understanding Python initially but I quickly caught on with the help of W3 schools. Enjoy!
